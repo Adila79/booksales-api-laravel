@@ -1,16 +1,20 @@
 <?php
+
 namespace App\Models;
 
-class Author
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Author extends Model
 {
-    public static function getAll()
+    protected $fillable = [
+        'name',
+        'country',
+        'bio',
+    ];
+
+    public function books(): HasMany
     {
-        return [
-            ['id' => 1, 'name' => 'Andrea Hirata', 'country' => 'Indonesia'],
-            ['id' => 2, 'name' => 'J.K. Rowling', 'country' => 'United Kingdom'],
-            ['id' => 3, 'name' => 'Tere Liye', 'country' => 'Indonesia'],
-            ['id' => 4, 'name' => 'George Orwell', 'country' => 'United Kingdom'],
-            ['id' => 5, 'name' => 'Agatha Christie', 'country' => 'United Kingdom'],
-        ];
+        return $this->hasMany(Book::class);
     }
 }
