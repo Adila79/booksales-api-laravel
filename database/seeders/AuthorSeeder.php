@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Database\Seeders;
@@ -14,35 +13,35 @@ class AuthorSeeder extends Seeder
             [
                 'name' => 'Andrea Hirata',
                 'country' => 'Indonesia',
-                'bio' => 'Penulis novel Laskar Pelangi',
+                'bio' => 'Penulis Laskar Pelangi.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'J.K. Rowling',
                 'country' => 'United Kingdom',
-                'bio' => 'Penulis seri Harry Potter',
+                'bio' => 'Penulis seri Harry Potter.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Tere Liye',
                 'country' => 'Indonesia',
-                'bio' => 'Penulis novel Indonesia',
+                'bio' => 'Penulis novel Indonesia.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'George Orwell',
                 'country' => 'United Kingdom',
-                'bio' => 'Penulis Animal Farm dan 1984',
+                'bio' => 'Penulis novel 1984.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Agatha Christie',
                 'country' => 'United Kingdom',
-                'bio' => 'Penulis novel misteri',
+                'bio' => 'Penulis novel misteri.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Database\Seeders;
@@ -14,15 +13,15 @@ class BookSeeder extends Seeder
             [
                 'title' => 'Laskar Pelangi',
                 'author_id' => 1,
-                'description' => 'Novel tentang perjuangan anak-anak Belitung',
+                'description' => 'Kisah perjuangan anak-anak Belitung.',
                 'published_year' => 2005,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Harry Potter and the Philosopher’s Stone',
+                'title' => "Harry Potter and the Philosopher's Stone",
                 'author_id' => 2,
-                'description' => 'Novel fantasi tentang dunia sihir',
+                'description' => 'Petualangan Harry Potter di dunia sihir.',
                 'published_year' => 1997,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -30,23 +29,23 @@ class BookSeeder extends Seeder
             [
                 'title' => 'Bumi',
                 'author_id' => 3,
-                'description' => 'Novel fantasi karya Tere Liye',
+                'description' => 'Petualangan di dunia paralel.',
                 'published_year' => 2014,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Animal Farm',
+                'title' => '1984',
                 'author_id' => 4,
-                'description' => 'Novel alegori tentang kekuasaan',
-                'published_year' => 1945,
+                'description' => 'Novel tentang masyarakat totaliter.',
+                'published_year' => 1949,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'title' => 'Murder on the Orient Express',
                 'author_id' => 5,
-                'description' => 'Novel misteri detektif Hercule Poirot',
+                'description' => 'Kasus misteri yang diselidiki Hercule Poirot.',
                 'published_year' => 1934,
                 'created_at' => now(),
                 'updated_at' => now(),
