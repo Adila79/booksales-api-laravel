@@ -37,4 +37,70 @@ class AuthorController extends Controller
             'data' => $author
         ], 201);
     }
+
+    // Show Author
+    public function show(string $id): JsonResponse
+    {
+        $author = Author::with('books')->find($id);
+
+        if (!$author) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Author tidak ditemukan'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Detail author berhasil ditampilkan',
+            'data' => $author
+        ]);
+    }
+
+    // Update Author
+    public function update(Request $request, string $id): JsonResponse
+    {
+        $author = Author::find($id);
+
+        if (!$author) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Author tidak ditemukan'
+            ], 404);
+        }
+
+        $validated = $request->validate([
+            'name' => 'sometimes|required|string|max:255',
+            'country' => 'sometimes|required|string|max:255',
+            'bio' => 'nullable|string',
+        ]);
+
+        $author->update($validated);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Author berhasil diperbarui',
+            'data' => $author
+        ]);
+    }
+
+    // Destroy Author
+    public function destroy(string $id): JsonResponse
+    {
+        $author = Author::find($id);
+
+        if (!$author) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Author tidak ditemukan'
+            ], 404);
+        }
+
+        $author->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Author berhasil dihapus'
+        ]);
+    }
 }
