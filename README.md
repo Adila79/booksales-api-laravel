@@ -21,6 +21,12 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Midtrans Sandbox
+
+The checkout API creates Midtrans bank-transfer payments from the backend using the Core API. Set `MIDTRANS_SERVER_KEY` and `MIDTRANS_CLIENT_KEY` in `.env` using your Sandbox credentials, and keep `MIDTRANS_IS_PRODUCTION=false` while testing. Never expose the Server Key in the React app or commit `.env`.
+
+Configure Midtrans's payment notification URL to `https://<public-api-host>/api/payments/midtrans/notification`. Midtrans cannot send notifications to a local `localhost` URL; use a publicly reachable development tunnel or deployed API. The frontend submits the selected bank to `POST /api/orders`, and the backend returns the Virtual Account details.
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
